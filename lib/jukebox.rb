@@ -33,7 +33,7 @@ end
 
 def run(songs)
   user_selected_option = ""
-  while user_selected_option != "exit"
+  #while user_selected_option != "exit"
     case user_selected_option
     when "help"
       help
@@ -47,5 +47,5 @@ def run(songs)
     else
       puts "Invalid command"
     end
-  end
+  #end
 end

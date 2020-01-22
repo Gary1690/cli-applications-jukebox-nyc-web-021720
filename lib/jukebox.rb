@@ -20,11 +20,10 @@ def play(songs)
   user_input = gets.strip
   if((1...songs.length) === user_input.to_i)
     puts "Playing #{songs[user_input.to_i-1]}"
-  elsif songs.detect{|song| song == user_input} 
+  elsif songs.detect{|song| song == user_input}
     puts "Playing #{user_input}"
   else
     puts "Invalid input, please try again"
-    play(songs)
   end
 end
 

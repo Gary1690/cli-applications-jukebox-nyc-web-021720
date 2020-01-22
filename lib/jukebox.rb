@@ -43,7 +43,6 @@ def run(songs)
       play(songs)
     when "exit"
       exit_jukebox
-      break
     else
       puts "Invalid command"
     end

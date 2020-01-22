@@ -17,9 +17,11 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_input = (gets.chomp).to_i
-  if((1...songs.length) === user_input)
-    puts "Playing #{songs[user_input-1]}"
+  user_input = gets.strip
+  if((1...songs.length) === user_input.to_i)
+    puts "Playing #{songs[user_input.to_i-1]}"
+  elsif songs.detect{|song| song == user_input} 
+    puts "Playing #{user_input}"
   else
     puts "Invalid input, please try again"
     play(songs)

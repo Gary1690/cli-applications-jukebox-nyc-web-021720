@@ -18,7 +18,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   user_input = gets.strip
-  if((1...songs.length) === user_input.to_i)
+  if((1..songs.length) === user_input.to_i)
     puts "Playing #{songs[user_input.to_i-1]}"
   elsif songs.detect{|song| song == user_input}
     puts "Playing #{user_input}"
@@ -46,6 +46,5 @@ def run(songs)
     when "exit"
       exit_jukebox
     end
-
   end
 end
